@@ -9,11 +9,20 @@ const FunctCounter = (props) => {
   const dispatch = useDispatch();
   return (
     <div>
-      <h2>Nama : {user.name}</h2>
-      <h2>Prodi : {user.prodi}</h2>
-      <h2>Counter </h2>
-      <h4>Count : {count}</h4>
-      <button onClick={() => dispatch(increment())}>Increment</button>
+      <h1>Selamat Datang {user.name}</h1>
+      <div>
+        <ul>
+          <li>Nama : {user.name}</li>
+          <li>Email :{user.email}</li>
+          <li>No Hp : {user.nohp}</li>
+          <li>Bootcamp : {user.bootcamp}</li>
+          <li>Tempat lahir : {user.tmpatLahir}</li>
+          <li>Tanggal Lahir : {user.tglLahir}</li>
+          <li>Alamat : {user.alamat}</li>
+          <li>Password : {user.password}</li>
+          <li>Confirm Password : {user.confirmPassword}</li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -1,12 +1,19 @@
+import { Route, Routes } from "react-router-dom";
 import styles from "./App.module.css";
-import FunctCounter from "./TASK 12/counter";
-import FormUser from "./TASK 12/FormUser";
+import { PostContextProvider } from "./components/10.consume-api/context/post-context";
+import HomePage from "./components/10.consume-api/pages/home";
+import { LoginPage } from "./components/10.consume-api/pages/login";
 
 function App() {
   return (
     <div className={styles.App}>
-      <FormUser />
-      <FunctCounter />
+      <PostContextProvider>
+        <Routes>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
+        </Routes>
+      </PostContextProvider>
     </div>
   );
 }
